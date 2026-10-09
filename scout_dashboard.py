@@ -162,6 +162,11 @@ with tab1:
     st.sidebar.markdown("---")
     st.sidebar.header(t["filters"])
     secilen_felsefe = st.sidebar.selectbox(t["philosophy"], felsefeler_list)
+
+    if secilen_felsefe in ["Yüksek Pres", "High Press"]:
+        msg = "💡 **Scout Analist Notu:** Halka açık verilerdeki kısıtlamalar nedeniyle Yüksek Pres hesaplamasında temsilci (proxy) olarak 'Top Kapma' ve 'Pas Arası' kullanılmıştır. Sistem, Premium (Opta/StatsBomb) veriler entegre edildiğinde doğrudan **'Başarılı Baskı (Successful Pressures)'** ve **'PPDA'** metriklerini hesaplayacak modülerliktedir." if is_tr else "💡 **Scout Analyst Note:** Due to public data limitations, 'Tackles Won' and 'Interceptions' are used as proxy metrics for High Press. When integrated with Premium event data, this engine is designed to instantly utilize **'Successful Pressures'** and **'PPDA'** metrics."
+        st.info(msg)
+
     secilen_mevki_etiket = st.sidebar.selectbox(t["position"], list(mevki_sozlugu.keys()))
     mevki_kodu = mevki_sozlugu[secilen_mevki_etiket]
     oneri_sayisi = st.sidebar.slider(t["count"], min_value=1, max_value=20, value=5)

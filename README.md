@@ -26,6 +26,9 @@ Instead of just asking *"Who plays like Player X?"*, this system answers: *"Amon
 *   **Proof-of-Concept Physical Module:** A dedicated environment demonstrating how the algorithm processes physical tracking data (Distance covered, Max Speed). Kept purely anonymous to maintain strict data ethics and avoid faking proprietary physical data for real players.
 *   **Bilingual UI:** Full support for both English and Turkish via a seamless UI toggle.
 
+### 🔮 Future Integrations & Data Limitations
+*   **Premium Event Data:** Currently, public datasets lack advanced pressing metrics. The **High Press KPI** uses *Tackles Won* and *Interceptions* as proxy metrics. The architecture is modular and fully prepared to integrate premium metrics like **'Successful Pressures'**, **'Pressures Leading to Turnover'**, and **'PPDA'** once proprietary licenses (e.g., StatsBomb 360, Opta) are available.
+
 ---
 
 ## 🛠️ Tech Stack
